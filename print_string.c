@@ -17,7 +17,7 @@ int print_string(va_list args)
 	{
 		_putchar(saged[i]);
 	}
-	
+
 
 	return (i);
 }
