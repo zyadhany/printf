@@ -20,10 +20,8 @@ int make_it(va_list args,char c)
         return print_int(args);
     }else if (c == '%')
     {
-        /*
-            return 1
-            and print %
-        */
+        _putchar('%');
+        return (1);
     }else if (c == 's')
     {
         /*
