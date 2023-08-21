@@ -9,8 +9,10 @@
  */
 int main(void)
 {
-    printf("hello %s\n","Bad");
+    int m = printf("%   s","Bad","love",'x');
+    int n = _printf("%   s","Bad","love",'x');
 
+    printf("%d %d\n",n,m);
  
     /*
     int len;
