@@ -9,7 +9,10 @@
  */
 int main(void)
 {
-    printf("Testing is working\n");
+    int n = printf("saged\n");
+    int m = _printf("saged\n");
+    printf("%d %d\n",n, m);
+ 
     /*
     int len;
     int len2;
