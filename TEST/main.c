@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-    int n = printf("saged\n");
-    int m = _printf("saged\n");
-    printf("%d %d\n",n, m);
+    char s = 's';
+    int m = _printf("saged %c asd %c %c\n",s,'2','2');
+    printf("%d\n",m);
  
     /*
     int len;
