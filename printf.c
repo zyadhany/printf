@@ -13,14 +13,34 @@ int _printf(const char *s, ...)
 {
 	int i, n = 0;
 
+	va_list args;
+    va_start(args, s);
+
 	if (!s)
 		return (-1);
 
-	for (i = 0; s[i] ; i++, n++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
+		if (s[i] != '%'){
+			_putchar(s[i]);
+			n++;
+			continue;
+		}
+
+		i++;
+		while (s[i] == ' ')
+		{
+			i++;
+		}
+		
+		if(s[i] == '\0')
+			return (-1);
+
+		n += make_it(args,s[i]);
+
 	}
 	
 
+	va_end(args);
 	return (n);
 }
