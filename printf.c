@@ -7,6 +7,8 @@
  * Return: number of char printed.
  * On error, return -1.
  */
+
+
 int _printf(const char *s, ...)
 {
 	int i, n = 0, j, keep;
@@ -37,13 +39,11 @@ int _printf(const char *s, ...)
 			n += make_it(args, s[i]);
 		else
 		{
-			n++;
+			n += 2 + (s[i - 1] == ' ');
 			_putchar('%');
 			if (s[i - 1] == ' ')
-			{
-				n++;
 				_putchar(' ');
-			}
+			_putchar(s[i]);
 		}
 	}
 	va_end(args);

@@ -15,7 +15,7 @@ int make_it(va_list args, char c)
 	{
 		return (print_char(args));
 	}
-	else if (c == 'i')
+	else if (c == 'i' || c == 'd')
 	{
 		return (print_int(args));
 	}
@@ -28,9 +28,6 @@ int make_it(va_list args, char c)
 	{
 		return (print_string(args));
 	}
-
-
-
 
 
 	return (-1);
