@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-    int m = printf("%   s","Bad","love",'x');
-    int n = _printf("%   s","Bad","love",'x');
+    int m = printf("%   -     s","Bad","love",'x');
+    int n = _printf("%   -    s","Bad","love",'x');
 
     printf("%d %d\n",n,m);
  
