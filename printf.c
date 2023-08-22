@@ -18,6 +18,16 @@ int _printf(const char s, ...)
 
     if (!s)
         return (-1);
+		    for (i = 0; s[i] != '\0'; i++)
+    {
+        int keep = 1;
+
+        if (s[i] != '%')
+        {
+            _putchar(s[i]);
+            n++;
+            continue;
+        }
 }
 int _printf(const char *s, ...)
 {
