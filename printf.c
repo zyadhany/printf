@@ -10,7 +10,8 @@
 
 int _printf(const char *s, ...)
 {
-	int i, n = 0;
+	int i, n = 0, j;
+	char *spef = "scid%%";
 
 	va_list args;
 
@@ -21,27 +22,30 @@ int _printf(const char *s, ...)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		int keep = 1;
+
 		if (s[i] != '%')
 		{
 			_putchar(s[i]);
 			n++;
 			continue;
 		}
-
-		i++;
-		while (s[i] == ' ')
+		while (s[i] && keep)
 		{
 			i++;
+			for (j = 0; spef[j] ; j++)
+			{
+				if (spef[j] == s[i])
+					keep = 0;
+			}
 		}
-
 		if (s[i] == '\0')
 			return (-1);
+
 
 		n += make_it(args, s[i]);
 
 	}
-
-
 	va_end(args);
 	return (n);
 }
