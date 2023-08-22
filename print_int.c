@@ -8,7 +8,6 @@
  * On error, return -1.
  */
 
- 
 int print_int(va_list args)
 {
 	int saged = va_arg(args, int) , n = 0, at = 0 , i;
