@@ -9,10 +9,12 @@
  */
 int main(void)
 {
-    int m = printf("%s",'\0',"love",'x');
-    int n = _printf("%s",'\0',"love",'x');
+    int n = _printf("%      jkgsa%s\n","saged");
+    int m = _printf("%      jkgsa%s\n","saged");
 
     printf("%d %d\n",n,m);
+ 
+
  
     /*
     int len;

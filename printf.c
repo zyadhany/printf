@@ -30,21 +30,34 @@ int _printf(const char *s, ...)
 			n++;
 			continue;
 		}
-		while (s[i] && keep)
-		{
+
+		i++;
+
+		while (s[i] == ' ')
 			i++;
-			for (j = 0; spef[j] ; j++)
-			{
-				if (spef[j] == s[i])
-					keep = 0;
-			}
-		}
+		
 		if (s[i] == '\0')
 			return (-1);
 
+		for (j = 0; spef[j] ; j++)
+		{
+			if (spef[j] == s[i])
+				keep = 0;
+		}
 
-		n += make_it(args, s[i]);
-
+		if(keep == 0)
+			n += make_it(args, s[i]);
+		else
+		{
+			n++;
+			_putchar('%');
+			if (s[i-1] == ' ')
+			{
+				n++;
+				_putchar(' ');
+			}
+			
+		}
 	}
 	va_end(args);
 	return (n);
