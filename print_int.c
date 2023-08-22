@@ -31,4 +31,11 @@ int print_int(va_list args)
 		s[at++] = saged % 10 + '0';
 		saged /= 10;
 	}
+ 	for ( i = at - 1; i >= 0; i--)
+	{
+		n++;
+		_putchar(s[i]);
+	}
  
+	return (n);
+}
