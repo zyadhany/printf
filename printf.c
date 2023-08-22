@@ -7,7 +7,18 @@
  * Return: number of char printed.
  * On error, return -1.
  */
+int _printf(const char s, ...)
+{
+    int i, n = 0, j;
+    charspef = "scid%%";
 
+    va_list args;
+
+    va_start(args, s);
+
+    if (!s)
+        return (-1);
+}
 int _printf(const char *s, ...)
 {
 	int i, n = 0, j;
