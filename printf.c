@@ -36,12 +36,28 @@ int _printf(const char s, ...)
         if (s[i] == '\0')
             return (-1);
 
-}        for (j = 0; spef[j] ; j++)
+        for (j = 0; spef[j] ; j++)
         {
             if (spef[j] == s[i])
                 keep = 0;
         }
+        if(keep == 0)
+            n += make_it(args, s[i]);
+        else
+        {
+            n++;
+            _putchar('%');
+            if (s[i-1] == ' ')
+            {
+                n++;
+                _putchar(' ');
+            }
 
+        }
+    }
+    va_end(args);
+    return (n);
+}
 int _printf(const char *s, ...)
 {
 	int i, n = 0, j;
