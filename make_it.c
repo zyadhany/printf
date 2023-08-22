@@ -5,7 +5,7 @@
  * @args: stander char to print
  * @c: what you want to print
  *
- * 
+ *
  * Return: number of char printed.
  * On error, return -1.
  */
