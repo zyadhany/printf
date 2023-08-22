@@ -10,7 +10,7 @@
 
 int print_int(va_list args)
 {
-	int saged = va_arg(args, int), n = 0, at = 0, i;
+	long int saged = va_arg(args, int), n = 0, at = 0, i;
 	char s[20];
 
 	if (saged == 0)

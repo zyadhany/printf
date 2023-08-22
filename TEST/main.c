@@ -15,8 +15,8 @@ int main(void)
    char s[] = "asddddafsdasdlkjfasdl;kf;aosdhjfh;aosjdhfkjlashdgfuioalgsdhuiofihsdjklfhakjsdhfhksajdfhkljafasd\n";
     */
 
-    int m = printf("%      k\n");
-    int n = _printf("%      k\n");
+    int m = printf("%i %i\n",INT_MAX , INT_MIN);
+    int n = _printf("%i %i\n",INT_MAX , INT_MIN);
 
     printf("\n%d %d\n",n,m);
  
