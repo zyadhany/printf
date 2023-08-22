@@ -9,10 +9,16 @@
  */
 int main(void)
 {
-    int n = _printf("%i\n",321);
-    int m = _printf("%      jkgsa%s\n","saged");
+    /*
+    int m = printf("%s%c%c%c%s%%%s%c","Loading ",'.','.',48," 99"," Please wait",'\n');
+    int n = _printf("%s%c%c%c%s%%%s%c","Loading ",'.','.',48," 99"," Please wait",'\n');
+   char s[] = "asddddafsdasdlkjfasdl;kf;aosdhjfh;aosjdhfkjlashdgfuioalgsdhuiofihsdjklfhakjsdhfhksajdfhkljafasd\n";
+    */
 
-    printf("%d %d\n",n,m);
+    int m = printf("%      k\n");
+    int n = _printf("%      k\n");
+
+    printf("\n%d %d\n",n,m);
  
 
  
