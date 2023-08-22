@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-    int n = _printf("%      jkgsa%s\n","saged");
+    int n = _printf("%i\n",321);
     int m = _printf("%      jkgsa%s\n","saged");
 
     printf("%d %d\n",n,m);
