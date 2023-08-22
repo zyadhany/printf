@@ -30,8 +30,5 @@ int make_it(va_list args, char c)
 	}
 
 
-
-
-
 	return (-1);
 }
