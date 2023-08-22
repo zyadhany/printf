@@ -13,6 +13,11 @@ int print_string(va_list args)
 	char *saged = va_arg(args, char *);
 	int i;
 
+	if (!saged)
+	{
+		return (_printf("(null)"));
+	}
+
 	for (i = 0; saged[i] ; i++)
 	{
 		_putchar(saged[i]);
