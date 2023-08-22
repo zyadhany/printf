@@ -19,4 +19,16 @@ int print_int(va_list args)
 		_putchar('0');
 		return (1);
 	}
+ 	if (saged < 0)
+	{
+		saged *= -1;
+		n++;
+		_putchar('-');
+	}
+ 
+	while (saged)
+	{
+		s[at++] = saged % 10 + '0';
+		saged /= 10;
+	}
  
