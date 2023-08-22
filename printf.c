@@ -28,6 +28,14 @@ int _printf(const char s, ...)
             n++;
             continue;
         }
+		        i++;
+
+        while (s[i] == ' ')
+            i++;
+
+        if (s[i] == '\0')
+            return (-1);
+
 }
 int _printf(const char *s, ...)
 {
